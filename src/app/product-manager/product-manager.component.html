@@ -1,0 +1,19 @@
+<h2>Manager Product</h2>
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Product Name</th>
+			<th>Price</th>
+			<th>Action</th>
+		</tr>
+
+		<tr *ngFor="let product of products">
+			<th>{{product.id}}</th>
+			<th>{{product.name}}</th>
+			<th>{{product.desc}}</th>
+			<th><button (click)="remove(product.id)"> xoa</button></th>
+		</tr>
+
+	</thead>
+</table>

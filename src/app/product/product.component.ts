@@ -12,10 +12,5 @@ export class ProductComponent implements OnInit {
 
   ngOnInit() {
   }
-product : product = {
-name : "item1",
-price:123,
-desc:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!",
-status:true,
-}
+
 }
