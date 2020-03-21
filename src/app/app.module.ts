@@ -15,10 +15,10 @@ import { ProductService } from './services/product.service';
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
+  imports:      [ BrowserModule,AppRoutingModule, FormsModule ],
   declarations: [ AppComponent, HelloComponent, ProductListComponent, SlideComponent, ProductComponent,CategoryComponent, ProductManagerComponent, ProductDetailComponent, AddProductComponent ],
   bootstrap:    [ AppComponent ],
-
-  
+  providers: [ProductService],
+ 
 })
 export class AppModule { }
