@@ -12,11 +12,14 @@ import { ProductManagerComponent } from './product-manager/product-manager.compo
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ProductService } from './services/product.service';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
   imports:      [ BrowserModule,AppRoutingModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, ProductListComponent, SlideComponent, ProductComponent,CategoryComponent, ProductManagerComponent, ProductDetailComponent, AddProductComponent ],
+  declarations: [ AppComponent, HelloComponent, ProductListComponent, SlideComponent, ProductComponent,CategoryComponent, ProductManagerComponent, ProductDetailComponent, AddProductComponent, HomeComponent, AboutComponent, ContactComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductService],
  
