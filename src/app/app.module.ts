@@ -15,11 +15,13 @@ import { ProductService } from './services/product.service';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { ServicesComponent } from './services/services.component';
 
 
 @NgModule({
   imports:      [ BrowserModule,AppRoutingModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, ProductListComponent, SlideComponent, ProductComponent,CategoryComponent, ProductManagerComponent, ProductDetailComponent, AddProductComponent, HomeComponent, AboutComponent, ContactComponent ],
+  declarations: [ AppComponent, HelloComponent, ProductListComponent, SlideComponent, ProductComponent,CategoryComponent, ProductManagerComponent, ProductDetailComponent, AddProductComponent, HomeComponent, AboutComponent, ContactComponent, NotFoundComponent, ServicesComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductService],
  
