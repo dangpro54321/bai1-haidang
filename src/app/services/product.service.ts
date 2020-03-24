@@ -7,8 +7,8 @@ export class ProductService {
   getProducts() {
     return this.products;
   }
-  getProduct() {
-
+  getProduct(id) {
+ return this.products.find(p=>p.id==id)
   }
   removeProduct(id) {
     return this.products = this.products.filter(product => product.id != id)
