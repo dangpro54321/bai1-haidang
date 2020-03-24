@@ -1,19 +1,25 @@
-<h2>Manager Product</h2>
-<table class="table table-bordered">
-	<thead>
-		<tr>
-			<th>ID</th>
-			<th>Product Name</th>
-			<th>Price</th>
-			<th>Action</th>
-		</tr>
+<header class="d-flex mb-3 pt-5 justify-content-between">
+	<button routerLink="/product/add" class="btn btn-primary">add product</button>
+	<h2>Manager Product</h2>
+</header>
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Product Name</th>
+				<th>Price</th>
+				<th>Action</th>
+			</tr>
 
-		<tr *ngFor="let product of products">
-			<th>{{product.id}}</th>
-			<th>{{product.name}}</th>
-			<th>{{product.desc}}</th>
-			<th><button (click)="remove(product.id)"> xoa</button></th>
-		</tr>
+			<tr *ngFor="let product of products">
+				<th>{{product.id}}</th>
+				<th>{{product.name}}</th>
+				<th>{{product.desc}}</th>
+				<th width="150" class="text-right">
+					<button class="btn btn-primary" (click)="remove(product.id)"> xoa</button>
+					<button class="btn btn-primary">Edit</button>
+				</th>
+			</tr>
 
-	</thead>
-</table>
+		</thead>
+	</table>
