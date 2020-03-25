@@ -17,11 +17,12 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ServicesComponent } from './services/services.component';
+import { ProductEditComponent } from './product-edit/product-edit.component';
 
 
 @NgModule({
   imports:      [ BrowserModule,AppRoutingModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, ProductListComponent, SlideComponent, ProductComponent,CategoryComponent, ProductManagerComponent, ProductDetailComponent, AddProductComponent, HomeComponent, AboutComponent, ContactComponent, NotFoundComponent, ServicesComponent ],
+  declarations: [ AppComponent, HelloComponent, ProductListComponent, SlideComponent, ProductComponent,CategoryComponent, ProductManagerComponent, ProductDetailComponent, AddProductComponent, HomeComponent, AboutComponent, ContactComponent, NotFoundComponent, ServicesComponent, ProductEditComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductService],
  
