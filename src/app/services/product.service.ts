@@ -9,6 +9,7 @@ export class ProductService {
   api = "https://5e7b50320e046300163330bd.mockapi.io/product";
   products = data;
   constructor(private http: HttpClient) {}
+  
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.api);
   }
@@ -28,6 +29,7 @@ export class ProductService {
     this.products.push(newObj);
     console.log(this.products);
   }
+
   updateProduct(product): Observable<Product> {
     return this.http.put<Product>(`${this.api}/${product.id}`, product);
   }
