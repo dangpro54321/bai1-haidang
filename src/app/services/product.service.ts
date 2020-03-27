@@ -28,7 +28,7 @@ export class ProductService {
     this.products.push(newObj);
     console.log(this.products);
   }
-  updateProduct(product) :Observable<Product>{
-  return this.http.put<Product>(`${this.api}/${product.id}`,product);
+  updateProduct(product): Observable<Product> {
+    return this.http.put<Product>(`${this.api}/${product.id}`, product);
   }
 }

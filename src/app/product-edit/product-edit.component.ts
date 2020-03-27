@@ -24,13 +24,13 @@ export class ProductEditComponent implements OnInit {
       this.productService.getProduct(param.productID).subscribe(data => {
         console.log(data);
         this.product = data;
-      })
-    })
+      });
+    });
   }
-  
+
   updateProduct() {
     this.productService.updateProduct(this.product).subscribe(data => {
       this.route.navigateByUrl("product/manager");
-    })
+    });
   }
 }
