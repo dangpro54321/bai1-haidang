@@ -1,27 +1,24 @@
-import { Injectable } from '@angular/core';
-import { data } from '../MockData'
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { Product } from '../Product';
+import { Injectable } from "@angular/core";
+import { data } from "../MockData";
+import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs";
+import { Product } from "../Product";
 
 @Injectable()
 export class ProductService {
-  api = "https://5e7b50320e046300163330bd.mockapi.io/product"
+  api = "https://5e7b50320e046300163330bd.mockapi.io/product";
   products = data;
-  constructor(
-    private http: HttpClient,
-  ) { }
+  constructor(private http: HttpClient) {}
   getProducts(): Observable<Product[]> {
-    // return this.products;
-   return this.http.get<Product[]>(this.api);
+    return this.http.get<Product[]>(this.api);
   }
 
-  getProduct(id) : Observable<Product> {
- return this.http.get<Product>(`${this.api}/${id}`);
+  getProduct(id): Observable<Product> {
+    return this.http.get<Product>(`${this.api}/${id}`);
   }
 
   removeProduct(id) {
-    return this.products = this.products.filter(product => product.id != id)
+    return (this.products = this.products.filter(product => product.id != id));
   }
 
   addProduct(product) {
@@ -29,7 +26,9 @@ export class ProductService {
     let newObj = { id: 6, ...product };
     console.log(newObj);
     this.products.push(newObj);
-    console.log(this.products)
+    console.log(this.products);
   }
-
+  updateProduct(product) :Observable<Product>{
+  return this.http.put<Product>(`${this.api}/${product.id}`,product);
+  }
 }
