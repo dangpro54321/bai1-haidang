@@ -16,17 +16,12 @@ export class ProductListComponent implements OnInit {
    this.getProducts();
   }
   removeItem(id) {
-    this.products = this.productService.removeProduct(id);
-    // this.products = this.products.filter(p => p.id != id);
+    this.productService.removeProduct(id).subscribe(response => {
+      console.log(response);
+      this.products= this.products.filter(product=>product.id!=response.id);
+    })
   }
   getProducts(){
     this.productService.getProducts().subscribe(response => this.products = response, error => console.log(error));
-  }
-  // products = data;
-
-  // selected: product;
-  // showDetail(product) {
-  // //   this.selected = product;
-  // }
-  
+  } 
 }

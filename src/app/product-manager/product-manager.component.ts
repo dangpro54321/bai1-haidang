@@ -16,8 +16,11 @@ export class ProductManagerComponent implements OnInit {
      this.getProducts();
   }
 
-  remove(pID) {
-    this.products = this.productService.removeProduct(pID);
+  removeItem(id) {
+    this.productService.removeProduct(id).subscribe(response => {
+      console.log(response);
+      this.products= this.products.filter(product=>product.id!=response.id);
+    })
   }
   getProducts(){
     this.productService.getProducts().subscribe(response => this.products = response, error => console.log(error));

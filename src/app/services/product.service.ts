@@ -18,8 +18,8 @@ export class ProductService {
     return this.http.get<Product>(`${this.api}/${id}`);
   }
 
-  removeProduct(id) {
-    return (this.products = this.products.filter(product => product.id != id));
+  removeProduct(id): Observable<Product> {
+    return this.http.delete<Product>(`${this.api}/${id}`);
   }
 
   addProduct(product): Observable<Product> {
