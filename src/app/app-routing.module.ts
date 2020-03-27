@@ -20,7 +20,8 @@ const routes: Routes = [
   { path: "services", component: ServicesComponent },
   { path: "product/add", component: AddProductComponent },
   { path: "product/manager", component: ProductManagerComponent },
-  { path: "product/detail/:id", component: ProductDetailComponent },
+  { path: "product/:productID", component: ProductDetailComponent },
+   { path: "product/detail/:id", component: ProductDetailComponent },
   { path: "product/edit/:id", component: ProductEditComponent },
   { path: "404", component: NotFoundComponent },
   { path: "**", redirectTo: "404", pathMatch: "full" }

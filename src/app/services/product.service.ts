@@ -16,8 +16,8 @@ export class ProductService {
    return this.http.get<Product[]>(this.api);
   }
 
-  getProduct(id) {
- return this.products.find(p=>p.id==id)
+  getProduct(id) : Observable<Product> {
+ return this.http.get<Product>(`${this.api}/${id}`);
   }
 
   removeProduct(id) {

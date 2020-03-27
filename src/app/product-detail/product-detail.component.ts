@@ -20,8 +20,11 @@ product:Product;
   }
 
 getproduct(){
-  this.activatedRoute.params.subscribe(p =>   {
-    this.product = this.productService.getProduct(p.id);
+  this.activatedRoute.params.subscribe(param =>   {
+    this.productService.getProduct(param.productID).subscribe(data=>{
+      console.log(data);
+      this.product= data;
+    })
   });
 }
 }
